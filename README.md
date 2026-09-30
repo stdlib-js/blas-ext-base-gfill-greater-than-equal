@@ -35,38 +35,32 @@ limitations under the License.
 
 > Replace strided array elements greater than or equal to a provided search element with a specified scalar constant.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-ext-base-gfill-greater-than-equal
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-gfillGreaterThanEqual = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-gfill-greater-than-equal@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var gfillGreaterThanEqual = require( 'path/to/vendor/umd/blas-ext-base-gfill-greater-than-equal/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-gfill-greater-than-equal@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.gfillGreaterThanEqual;
-})();
-</script>
+var gfillGreaterThanEqual = require( '@stdlib/blas-ext-base-gfill-greater-than-equal' );
 ```
 
 #### gfillGreaterThanEqual( N, searchElement, alpha, x, strideX )
@@ -159,14 +153,9 @@ gfillGreaterThanEqual.ndarray( 3, 1.0, 5.0, x, 1, x.length-3 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-gfill-greater-than-equal@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var gfillGreaterThanEqual = require( '@stdlib/blas-ext-base-gfill-greater-than-equal' );
 
 var x = discreteUniform( 10, -100, 100, {
     'dtype': 'float64'
@@ -175,11 +164,6 @@ console.log( x );
 
 gfillGreaterThanEqual( x.length, 0.0, 5.0, x, 1 );
 console.log( x );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -212,11 +196,6 @@ For more information on the project, filing bug reports and feature requests, an
 [![Chat][chat-image]][chat-url]
 
 ---
-
-## License
-
-See [LICENSE][stdlib-license].
-
 
 ## Copyright
 
@@ -264,13 +243,11 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [esm-readme]: https://github.com/stdlib-js/blas-ext-base-gfill-greater-than-equal/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/blas-ext-base-gfill-greater-than-equal/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-gfill-greater-than-equal/main/LICENSE
-
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor/tree/umd
+[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor
 
-[@stdlib/blas/ext/base/gfill-nan]: https://github.com/stdlib-js/blas-ext-base-gfill-nan/tree/umd
+[@stdlib/blas/ext/base/gfill-nan]: https://github.com/stdlib-js/blas-ext-base-gfill-nan
 
 <!-- <related-links> -->
 
